@@ -10,34 +10,6 @@
             <generator strategy="AUTO" />
         </id>
         
-        <field name="username" type="string" lenght="255" nullable="false" />
-        
-        <field name="usernameCanonical" type="string" lenght="255" nullable="true" />
-        
-        <field name="email" type="string" lenght="255" nullable="false" />
-        
-        <field name="emailCanonical" type="string" lenght="255" nullable="true" />
-
-		<field name="salt" type="string" lenght="255" nullable="true" />
-
-		<field name="password" type="string" lenght="255" nullable="false" />
-		
-		<field name="confirmationToken" type="string" nullable="true" /> 
-		
-		<field name="enabled" type="boolean" />
-		
-		<field name="locked" type="boolean" />
-		
-		<field name="expired" type="boolean" />
-		
-		<field name="credentialsExpired" type="boolean" nullable="true" />
-		
-		<field name="lastLogin" type="datetime" nullable="true" />
-		
-		<field name="passwordRequestedAt" type="datetime" nullable="true" />
-		
-		<field name="credentialsExpireAt" type="datetime" nullable="true" />
-        
     </entity>
 
 </doctrine-mapping>
