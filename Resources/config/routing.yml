@@ -1,0 +1,4 @@
+o2_user_welcome:
+    pattern:  /welcome
+    defaults: { _controller: 'OboxOutremerboxBundle:Default:index' }
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="O2\Bundle\UserBundle\Entity\User" table="o2_user">
+    
+    	<id name="id" type="integer" column="id">
+            <generator strategy="AUTO" />
+        </id>
+        
+        <field name="username" type="string" lenght="255" nullable="false" />
+        
+        <field name="usernameCanonical" type="string" lenght="255" nullable="true" />
+        
+        <field name="email" type="string" lenght="255" nullable="false" />
+        
+        <field name="emailCanonical" type="string" lenght="255" nullable="true" />
+
+		<field name="salt" type="string" lenght="255" nullable="true" />
+
+		<field name="password" type="string" lenght="255" nullable="false" />
+		
+		<field name="confirmationToken" type="string" nullable="true" /> 
+		
+		<field name="enabled" type="boolean" />
+		
+		<field name="locked" type="boolean" />
+		
+		<field name="expired" type="boolean" />
+		
+		<field name="credentialsExpired" type="boolean" nullable="true" />
+		
+		<field name="lastLogin" type="datetime" nullable="true" />
+		
+		<field name="passwordRequestedAt" type="datetime" nullable="true" />
+		
+		<field name="credentialsExpireAt" type="datetime" nullable="true" />
+        
+    </entity>
+
+</doctrine-mapping>
