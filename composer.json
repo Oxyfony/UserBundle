@@ -22,9 +22,9 @@
   },
   "autoload" : {
     "psr-0" : {
-      "O2\\Bundle\\UIBundle" : ""
+      "O2\\Bundle\\UserBundle" : ""
     }
   },
-  "target-dir" : "O2/Bundle/UIBundle",
+  "target-dir" : "O2/Bundle/UserBundle",
   "minimum-stability" : "dev"
 }
