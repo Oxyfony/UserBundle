@@ -1,0 +1,30 @@
+{
+  "name" : "oxyfony/user-bundle",
+  "type" : "symfony-bundle",
+  "description" : "Symfony Oxygen User Bundle",
+  "keywords" : [
+    "Oxygen",
+    "symfony",
+    "user bundle"
+  ],
+  "homepage" : "http://oxygen.soletic.org",
+  "license" : "MIT",
+  "authors" : [{
+    "name" : "Oxygen Community",
+    "homepage" : "http://oxygen.soletic.org"
+  }],
+  "require" : {
+    "php" : ">=5.3.2",
+    "symfony/framework-bundle" : "~2.3"
+  },
+  "require-dev" : {
+    "phpunit/phpunit" : "~3.7"
+  },
+  "autoload" : {
+    "psr-0" : {
+      "O2\\Bundle\\UIBundle" : ""
+    }
+  },
+  "target-dir" : "O2/Bundle/UIBundle",
+  "minimum-stability" : "dev"
+}
