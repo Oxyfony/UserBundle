@@ -3,6 +3,8 @@ Oxygen User Bundle
 
 Oxygen User Bundle is a Symfony 2 bundle for create User in your Symfony 2 application based on FOS User Bundle.
 
+[![Build Status](https://travis-ci.org/Oxyfony/UserBundle.svg?branch=master)](https://travis-ci.org/Oxyfony/UserBundle)
+
 Documentation
 -------------
 The bulk of the documentation is stored in the Resources/docs/index.md file in bundle :
