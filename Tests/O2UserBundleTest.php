@@ -9,8 +9,8 @@
  */
 namespace O2\Bundle\UserBundle\Tests;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use O2\Bundle\UserBundle\O2UserBundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * O2 User Bundle Unit Test
@@ -26,6 +26,7 @@ class O2UserBundleTest extends \PHPUnit_Framework_TestCase
 	public function testRegistering()
 	{
 		$container = new ContainerBuilder();
+		
 		$bundle = new O2UserBundle();
 		$bundle->boot();
 		$bundle->build($container);
