@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    
+    <parameters>
+        <parameter key="o2_user.forms.registration.class">O2\Bundle\UserBundle\Form\Type\RegistrationFormType</parameter>
+        <parameter key="o2_user.forms.profile.class">O2\Bundle\UserBundle\Form\Type\ProfileFormType</parameter>
+        <parameter key="o2_user.user.class">O2\Bundle\UserBundle\Entity\User</parameter>
+    </parameters>
+
+    <services>
+        <service id="o2_user.forms.registration" class="%o2_user.forms.registration.class%">
+        	<argument>%o2_user.user.class%</argument>
+            <tag name="form.type" alias="o2_user_registration" />
+        </service>
+        
+        <service id="o2_user.forms.profile" class="%o2_user.forms.profile.class%">
+        	<argument>%o2_user.user.class%</argument>
+            <tag name="form.type" alias="o2_user_profile" />
+        </service>
+    </services>
+    
+</container>

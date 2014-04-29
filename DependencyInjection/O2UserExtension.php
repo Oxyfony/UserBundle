@@ -52,7 +52,7 @@ class O2UserExtension extends Extension implements PrependExtensionInterface
     	$configs = $container->getExtensionConfig($this->getAlias());
     	$config = $this->processConfiguration($configuration, $configs);
     	
-    	// If email as username is defined, update FOSUserBundle Configuration
+    	// If email as username is defined, update FOSUserBundle 
     	if ( isset($config['email_as_username']) && true === $config['email_as_username'] ) {
     		$config = array(
     			'registration' => array(
