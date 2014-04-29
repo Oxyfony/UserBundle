@@ -8,7 +8,18 @@ Pour ce faire, il suffit de rajouter à la configuration de O2 User Bundle le pa
 
 .. code-block:: yaml
 
+   # /path/to/application/app/config/config.yml
    o2_user:
        email_as_username: true
        
 Par défaut email_as_username est à false.
+
+Pour finir, il faut spécifier à FOS User Bundle de prendre en compte l'email pour l'identification.
+
+.. code-block:: yaml
+
+    # /path/to/application/app/config/security.yml
+    security:
+        providers:
+            fos_userbundle:
+                id: fos_user.user_provider.username_email
