@@ -17,4 +17,14 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author Nicolas Claverie <info@artscore-studio.fr>
  *
  */
-class O2UserBundle extends Bundle {}
+class O2UserBundle extends Bundle
+{
+	/**
+	 * (non-PHPdoc)
+	 * @see \Symfony\Component\HttpKernel\Bundle\Bundle::getParent()
+	 */
+	public function getParent()
+	{
+		return 'FOSUserBundle';
+	}
+}

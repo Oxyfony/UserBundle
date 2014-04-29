@@ -1,0 +1,32 @@
+FOS\UserBundle\Model\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: email
+            errorPath: email
+            message: fos_user.email.already_used
+            groups: [ "O2UserRegistration", "O2UserProfile" ]
+  
+    properties:
+        email:
+            - NotBlank:
+                message: fos_user.email.blank
+                groups: [ "O2UserRegistration", "O2UserProfile" ]
+            - Length:
+                min: 2
+                minMessage: fos_user.email.short
+                max: 255
+                maxMessage: fos_user.email.long
+                groups: [ "O2UserRegistration", "O2UserProfile" ]
+                
+FOS\UserBundle\Model\Group:
+    properties:
+        name:
+            - NotBlank:
+                message: fos_user.group.blank
+                groups: [ "O2UserRegistration" ]
+            - Length:
+                min: 2
+                minMessage: fos_user.group.short
+                max: 255
+                maxMessage: fos_user.group.long
+                groups: [ "O2UserRegistration" ]

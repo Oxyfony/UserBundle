@@ -17,4 +17,16 @@ use FOS\UserBundle\Model\User as BaseUser;
  * @author Nicolas Claverie <info@artscore-studio.fr>
  *
  */
-class User extends BaseUser {}
+class User extends BaseUser
+{
+	/**
+	 * (non-PHPdoc)
+	 * @see \FOS\UserBundle\Model\User::setEmail()
+	 */
+	public function setEmail($email)
+	{
+		$email = is_null($email) ? '' : $email;
+		parent::setEmail($email);
+		$this->setUsername($email);
+	}
+}
