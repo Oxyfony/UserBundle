@@ -11,13 +11,15 @@ namespace O2\Bundle\UserBundle\Tests;
 
 use O2\Bundle\UserBundle\DependencyInjection\O2UserExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
 /**
  * Abstract Class for testing O2 User Bundle Dependency Injection
  * 
  * @author Nicolas Claverie <info@artscore-studio.fr>
  *
  */
-abstract class AbstractO2UserExtensionTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractO2UserExtensionTest extends WebTestCase
 {
 	private $extension;
 	private $container;
@@ -26,6 +28,8 @@ abstract class AbstractO2UserExtensionTest extends \PHPUnit_Framework_TestCase
 	{
 		$this->extension = new O2UserExtension();
 		$this->container = new ContainerBuilder();
+		
+		$this->extension->load(array(), $this->container);
 		$this->container->registerExtension($this->extension);
 	}
 	
@@ -48,23 +52,11 @@ abstract class AbstractO2UserExtensionTest extends \PHPUnit_Framework_TestCase
 	}
 	
 	/**
-	 * Test bundle with email_as_username param set to false
-	 */
-	public function testDisabledConfiguration()
-	{
-		$this->loadConfiguration($this->container, 'disabled');
-		$this->container->compile();
-		
-		$this->assertFalse($this->container->has('o2_user.forms.registration'));
-		$this->assertFalse($this->container->has('o2_user.forms.profile'));
-	}
-	
-	/**
 	 * Test bundle with email_as_username param set to true
 	 */
 	public function testEnableConfiguration()
 	{
-		$this->loadConfiguration($this->container, 'enabled');
+		$this->loadConfiguration($this->container, 'email_as_username');
 		$this->container->compile();
 		
 		$this->assertFalse($this->container->has('o2_user.forms.registration'));
