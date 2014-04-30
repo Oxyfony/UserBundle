@@ -9,6 +9,7 @@
         <parameter key="o2_user.forms.registration.class">O2\Bundle\UserBundle\Form\Type\RegistrationFormType</parameter>
         <parameter key="o2_user.forms.profile.class">O2\Bundle\UserBundle\Form\Type\ProfileFormType</parameter>
         <parameter key="o2_user.user.class">O2\Bundle\UserBundle\Entity\User</parameter>
+        <parameter key="o2_user.user.listener.class">O2\Bundle\UserBundle\EventListener\UserListener</parameter>
     </parameters>
 
     <services>
@@ -20,6 +21,11 @@
         <service id="o2_user.forms.profile" class="%o2_user.forms.profile.class%">
         	<argument>%o2_user.user.class%</argument>
             <tag name="form.type" alias="o2_user_profile" />
+        </service>
+        
+        <service id="o2_user.user.listener" class="%o2_user.user.listener.class%">
+        	<argument>%o2_user.email_as_username%</argument>
+        	<tag name="doctrine.event_listener" event="prePersist" />
         </service>
     </services>
     
