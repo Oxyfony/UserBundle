@@ -23,10 +23,6 @@
             <tag name="form.type" alias="o2_user_profile" />
         </service>
         
-        <service id="o2_user.user.listener" class="%o2_user.user.listener.class%">
-        	<argument>%o2_user.email_as_username%</argument>
-        	<tag name="doctrine.event_listener" event="prePersist" />
-        </service>
     </services>
     
 </container>
