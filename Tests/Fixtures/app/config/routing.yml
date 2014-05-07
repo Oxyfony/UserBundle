@@ -1,3 +1,0 @@
-o2_ui:
-    resource: "@O2UIBundle/Resources/config/routing.yml"
-    prefix: /ui
