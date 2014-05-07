@@ -1,0 +1,29 @@
+	protected $container;
+	
+	/*public function __construct()
+	{
+		$kernel = new AppKernel("minimal", true);
+		$kernel->boot();
+		$this->container = $kernel->getContainer();
+		parent::__construct();
+	}*/
+	
+	/*protected function get($service)
+	{
+		return $this->container->get($service);
+	}*/
+	/**
+	 * @return EntityManager
+	 */
+	/*public function getEntityManager() {
+		return $this->get('doctrine.orm.entity_manager');
+	}*/
+	
+	public function setUp() {
+		// Create schema
+		/*$schemaTool = new SchemaTool($this->getEntityManager());
+		$cmf = $this->getEntityManager()->getMetadataFactory();
+		$classes = $cmf->getAllMetadata();
+		$schemaTool->dropDatabase();
+		$schemaTool->createSchema($classes);*/
+	}

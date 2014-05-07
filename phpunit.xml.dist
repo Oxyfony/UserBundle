@@ -10,9 +10,6 @@
 	stopOnFailure="false"
 	syntaxCheck="false"
 	bootstrap="./Tests/bootstrap.php">
-	<php>
-		<server name="KERNEL_DIR" value="./Tests/Fixtures/app" />
-	</php>
     <testsuites>
         <testsuite name="O2 UI Bundle test suite">
             <directory suffix="Test.php">./Tests</directory>
