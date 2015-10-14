@@ -9,7 +9,7 @@
  */
 namespace O2\Bundle\UserBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
+use FOS\UserBundle\Entity\User as BaseUser;
 	
 /**
  * User Entity
